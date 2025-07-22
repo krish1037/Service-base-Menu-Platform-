@@ -553,9 +553,9 @@ def sms_service():
             if phone_number and message_body:
                 try:
                     # Twilio SMS code
-                    account_sid = "ACb8b1df65d79a7fb5bddb7c2ae9967636"
-                    auth_token = "ef93d245d60f601622b3e50f14c8a8c8"
-                    twilio_phone = "+14847490866"
+                    account_sid = "Enter your SID"
+                    auth_token = "Enter your auth token"
+                    twilio_phone = "Enter your own Twilio number"
                     
                     client = Client(account_sid, auth_token)
                     
@@ -595,9 +595,9 @@ def call_service():
             if phone_number and call_message:
                 try:
                     # Twilio call code
-                    account_sid = 'ACb8b1df65d79a7fb5bddb7c2ae9967636'
-                    auth_token = 'ef93d245d60f601622b3e50f14c8a8c8'
-                    twilio_number = '+14847490866'
+                    account_sid = 'Enter your SID'
+                    auth_token = 'Enter your auth token'
+                    twilio_number = 'enter your twilio number'
                     
                     client = Client(account_sid, auth_token)
                     
@@ -637,9 +637,9 @@ def whatsapp_service():
             if phone_number and message_body:
                 try:
                     # Twilio WhatsApp code
-                    account_sid = 'ACb8b1df65d79a7fb5bddb7c2ae9967636'
-                    auth_token = 'ef93d245d60f601622b3e50f14c8a8c8'
-                    twilio_whatsapp_number = 'whatsapp:+14155238886'
+                    account_sid = 'Enter your own SID'
+                    auth_token = 'Enter your own auth token'
+                    twilio_whatsapp_number = ' Enter your own twilio whatsapp:number'
                     recipient_number = f'whatsapp:{phone_number}'
                     
                     client = Client(account_sid, auth_token)
@@ -672,7 +672,7 @@ def email_service():
         st.markdown("**Send Email**")
         
         sender_email = st.text_input("Your Email", value="krishsharma1037@gmail.com")
-        sender_password = st.text_input("App Password", type="password", value="bvgkpvaqlqavzpuz")
+        sender_password = st.text_input("App Password", type="password", value="Enter your own value")
         receiver_email = st.text_input("Recipient Email", placeholder="recipient@example.com")
         subject = st.text_input("Subject", placeholder="Enter email subject")
         body = st.text_area("Message", placeholder="Enter your email message...")
@@ -821,7 +821,7 @@ def pdf_service():
     st.header("📄 PDF Summary Generator")
     
     # Set up Google API key
-    os.environ["GOOGLE_API_KEY"] = "AIzaSyDZjyc-P0o1BBdEJXUNmoUDubQDWKyUfCI"
+    os.environ["GOOGLE_API_KEY"] = "Enter your own Api key"
     
     uploaded_file = st.file_uploader("Upload PDF file", type="pdf")
     
