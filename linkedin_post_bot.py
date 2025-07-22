@@ -12,9 +12,9 @@ def sanitize_for_selenium(text: str) -> str:
     return "".join(c for c in text if c <= '\uFFFF')
 
 def run_linkedin_automation(prompt: str, image_path: str = None) -> str:
-    LINKEDIN_EMAIL = os.environ.get("LINKEDIN_EMAIL", "2023pietcakrish034@poornima.org")
-    LINKEDIN_PASSWORD = os.environ.get("LINKEDIN_PASSWORD", "yes567yo")
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "AIzaSyA9KuT0uNgJC-rAvwL-FJHQ1M1QNqfvM0w")
+    LINKEDIN_EMAIL = os.environ.get("LINKEDIN_EMAIL", "enter your own email")
+    LINKEDIN_PASSWORD = os.environ.get("LINKEDIN_PASSWORD", "enter your own password")
+    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY", "Enter your own API key")
     CHROMEDRIVER_PATH = "./chromedriver.exe"
 
     llm = ChatGoogleGenerativeAI(
